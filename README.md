@@ -8,7 +8,8 @@ Proxmox Virtual Environment is a free virtualization solution based on the Linux
 
 ### Extend disk space of a VM (lvm partition)
 
-### Dark Theme (you know, because light attracts bugs :laughing:)
+### Dark Theme 
+(you know, because light attracts bugs :laughing:)
 
 ### Installing OMV 5
 
