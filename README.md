@@ -3,33 +3,46 @@
 ## Introduction
 Proxmox Virtual Environment is a free virtualization solution based on the Linux KVM hypervisor. Proxmox also offers a container solution with LXC
 
-### Installation of PVE and first configurations
 
+### 01 - Installation of PVE and first configurations
+* Best practices
+- [x] BIOS configs
+- [x] Initial mods for perfomance and GPU passthrough
+- [x] Dark Theme (you know,... because light attracts bugs :laughing:)
+- [x] Extend disk space of a VM (lvm partition)
+- [x] Update & upgrade
+- [x] LACP
+- [ ] Cluster
 
-### Extend disk space of a VM (lvm partition)
+### 02 - LXC & VM Containers
+- [x] Unifi
+- [x] PiHole (2 Sync)
+- [x] Traefik
+- [x] Wyze
+- [x] Docker VM Template
+- [ ] Fileshare
 
-### Cluster
+### 03 - Creating a Win10 gaming VM
+- [x] Virtio ISO
+- [x] GPU Passthrough
+- [x] HDD Passthrough
 
-### Dark Theme 
-(you know, because light attracts bugs :laughing:)
+### 04 - HiveOS VM
+- [x] VM config
+- [ ] NVIDIA OC ERROR
 
-### Installing OMV 5
-
-### Creating a Win10 gaming VM
-* GPU Passthrough
-* HDD Passthrough
-
-### HiveOS VM
-
-### Troubleshooting
+### 05 - Troubleshooting
 * VM not stopping
 * Import a QCOW2 file
 * Console Tips
 * Helpers
-* Best practices
-* LACP
 * Delete disk - disk has holder 500
 * Moving backups between PVE's
+* Download from URL
 
-References
+---
 
+> References
+>
+> * [Dark Theme](https://github.com/Weilbyte/PVEDiscordDark)
+> 
