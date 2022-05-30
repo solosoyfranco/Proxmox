@@ -5,4 +5,5 @@
 * Ventoy software (Multiboot from USB Drive)
   * Link to [Ventoy](https://www.ventoy.net/en/download.html)
 * Customize bash by script (shell root)
-`wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/01_Install/start.sh | bash`
+
+``` wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/01_Install/start.sh | bash```
