@@ -31,3 +31,8 @@ sed -i '4,8d' /etc/pve/storage.cfg
 
 echo "-Dark theme"
 bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install
+
+
+echo "----------------------------------------------------------------"
+echo "End of script"
+echo "----------------------------------------------------------------"
