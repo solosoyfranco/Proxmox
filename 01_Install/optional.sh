@@ -15,8 +15,8 @@ echo "-unmount the lvm-Thin"
 umount /dev/pve/data
 
 echo "-remove partition"
-lvremove /dev/pve/data
-echo y
+echo yes | lvremove /dev/pve/data
+
 
 echo "-resize the LVM and use the whole disk"
 lvresize -l +100%FREE /dev/pve/root
