@@ -64,12 +64,12 @@ if [ $(grep -c "void({ //Ext.Msg.show({" /usr/share/javascript/proxmox-widget-to
     systemctl restart pveproxy.service
 fi
 
-#4: Optimitation of SWAP memory
-echo "- Paramatrage du SWAP pour qu'il ne s'active que lorsqu'il ne reste plus que 10% de RAM dispo"
+#4: Optimization of SWAP memory
+echo "- SWAP setting so that it only activates when there is only 10% of RAM left"
 sysctl vm.swappiness=10
-echo "- Désactivation du SWAP"
+echo "- Disabling SWAP"
 swapoff -a
-echo "- Activation du SWAP"
+echo "- SWAP activation"
 swapon -a
 
 echo "----------------------------------------------------------------"
