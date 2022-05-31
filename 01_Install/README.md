@@ -23,3 +23,9 @@ Optional
 
 * Dark mode
 * Remove LVM Partition
+
+```bash
+
+wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/01_Install/optional.sh
+
+```
