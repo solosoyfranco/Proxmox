@@ -132,5 +132,8 @@ wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/01_Ins
   * Datacenter
     * Cluster
       * **Create Cluster**
-* I do all of this from the GUI in each NODE:
-  * 
+        * Cluster Name
+      * **Join Information**
+        * Copy Information
+  * Go to the child nodes and paste the information to add to the cluster.
+ 
