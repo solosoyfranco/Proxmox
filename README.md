@@ -6,13 +6,21 @@ Proxmox Virtual Environment is a free virtualization solution based on the Linux
 
 ### 01 - Installation of PVE and first configurations
 * Best practices
-- [x] BIOS configs
-- [x] Initial mods for perfomance and GPU passthrough
+- [x] Removing/Adding repositories
+- [x] Update OS and LXC Templates
+- [x] Remove the subscription pop-up
+- [x] Optimization of SWAP memory
+* Optional
 - [x] Dark Theme (you know,... because light attracts bugs :laughing:)
 - [x] Extend disk space of a VM (lvm partition)
-- [x] Update & upgrade
-- [x] LACP
-- [ ] Cluster
+- [x] Network Config - Link aggregation
+  - [x] Cisco Link aggregation
+  - [x] Unifi Link aggregation
+- [x] Cluster
+* My BIOS settings
+- [x] Gigabyte AMD X570 Aourus Master
+- [x] Gigabyte Intel GA-Z170MX-Gaming 5
+- [x] Dell Optiplex 790
 
 ### 02 - LXC & VM Containers
 - [x] Unifi
