@@ -1,17 +1,19 @@
 # My BIOS settings
 ### Gigabyte X570 Aourus Master
-  * Amd Ryzen 9 5900x - 12 cores / 24 Thread
+  * 24 x AMD Ryzen 9 5900X 12-Core Processor (1 Socket)
   * 64 GiB Ram
-  * Gigabyte RTX 3090
+  * eVga GA102 [GeForce RTX 3090]
   * 128 SSD - Proxmox OS
 
 **BIOS SETTINGS**
   * Main
 
 ---
-### Gigabyte GA-Z170MX-Gaming 5
-  * 4 x Intel(R) Core(TM)  
+### Gigabyte Z170MX-Gaming 5
+  * 8 x Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz (1 Socket)  
   * 32 GiB Ram
+  * IGPU: Intel HD Graphics 530
+  * GPU: Saphhire Nitro [Radeon RX 580]
 
 **BIOS SETTINGS**
   * Main
