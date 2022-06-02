@@ -15,6 +15,8 @@ Once connected in SSH (root) on your host, paste the following line:
 wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/AMD.sh | bash
 
 ```
+**NOTE**: dont run this script more than once.
+
 ### Locate and take note of the numbers on your video card... I also included the digits that are on the NVIDIA audio card
 Example:
 `01:00.0 3D controller [0302]: NVIDIA Corporation Device **[10de:1f95]** (rev a1)`
