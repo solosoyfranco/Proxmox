@@ -10,28 +10,26 @@ echo "----------------------------------------------------------------"
 echo "- save original grub"
 cp /etc/default/grub /etc/default/grub-$timestamp.bak
 #change time of bootscreen and deactivate GPU to initialize with proxmox
-sed -i 'GRUB_TIMEOUT=5 GRUB_TIMEOUT=1/g' /etc/default/grub
-sed -i 'GRUB_CMDLINE_LINUX_DEFAULT="quiet" GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on textonly nomodeset video=vesafb:off video=astdrmfb video=efifb:off"/g' /etc/default/grub
+sed -i 's/GRUB_TIMEOUT=5 GRUB_TIMEOUT=1/g' /etc/default/grub
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet" GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on textonly nomodeset video=vesafb:off video=astdrmfb video=efifb:off"/g' /etc/default/grub
 
 #extra options
-echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf
-echo "options kvm ignore_msrs=1" > /etc/modprobe.d/kvm.conf
+echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" >> /etc/modprobe.d/iommu_unsafe_interrupts.conf
+echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
 #VFIO drivers
-echo "vfio" > /etc/modules
-echo "vfio_iommu_type1" > /etc/modules
-echo "vfio_pci" > /etc/modules
-echo "vfio_virqfd" > /etc/modules
+echo "vfio" >> /etc/modules
+echo "vfio_iommu_type1" >> /etc/modules
+echo "vfio_pci" >> /etc/modules
+echo "vfio_virqfd" >> /etc/modules
 #blacklist drivers
-echo "blacklist nvidia" > /etc/modprobe.d/blacklist.conf
-echo "blacklist nouveau" > /etc/modprobe.d/blacklist.conf
-echo "blacklist radeon" > /etc/modprobe.d/blacklist.conf
+echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist radeon" >> /etc/modprobe.d/blacklist.conf
 
 #Example: this only apply to my system
 #echo "options vfio-pci ids=10de:2204,10de:1aef disable_vga=1" > /etc/modprobe.d/vfio.conf
 
-#update changes
-update-initramfs -u -k all
-update-grub
+
 
 echo "----------------------------------------------------------------"
 echo "take note of your GPU VFIO-PCI IDs and run the next script"
