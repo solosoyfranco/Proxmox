@@ -10,11 +10,12 @@ echo "----------------------------------------------------------------"
 echo "- save original grub"
 mv /etc/default/grub /etc/default/grub-$timestamp.bak
 #change time of bootscreen and deactivate GPU to initialize with proxmox
-echo "GRUB_DEFAULT=0
-GRUB_TIMEOUT=1
-GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on textonly nomodeset video=vesafb:off video=astdrmfb video=efifb:off"
-GRUB_CMDLINE_LINUX=""" >> /etc/default/grub
+echo 'GRUB_DEFAULT=0' >> /etc/default/grub
+echo 'GRUB_TIMEOUT=1' >> /etc/default/grub
+echo 'GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`' >> /etc/default/grub
+echo 'GRUB_CMDLINE_LINUX_DEFAULT="quiet amd_iommu=on textonly nomodeset video=vesafb:off video=astdrmfb video=efifb:off"' >> /etc/default/grub
+echo 'GRUB_CMDLINE_LINUX=""' >> /etc/default/grub
+
 
 #add extra options
 echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf
