@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 echo "----------------------------------------------------------------"
 echo "Start of script"
 echo "----------------------------------------------------------------"
@@ -16,15 +14,8 @@ echo "----------------------------------------------------------------"
 echo "you can check or edit your VFIO ID with the following command:"
 echo "nano /etc/modprobe.d/vfio.conf"
 echo "----------------------------------------------------------------"
-
-### update changes
-# echo " - update initram"
-# update-initramfs -u -k all
-# echo " - update grub"
-# update-grub
-
-
-
 echo "----------------------------------------------------------------"
+echo "update-initramfs -u -k all"
+echo "update-grub"
 echo "end of script please REBOOT NOW"
 echo "----------------------------------------------------------------"
