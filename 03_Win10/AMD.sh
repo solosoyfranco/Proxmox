@@ -42,9 +42,9 @@ echo "----------------------------------------------------------------"
 lspci -nn -k | grep -EA3 'VGA|3D|Display|Audio'
 #download the scripts
 curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/fix_gpu_pass.sh -o "fix_gpu_pass.sh"
-curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/GPU_ID.sh -o "GPU_ID.sh"
+curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/GPU_ID.sh -o "GPU.sh"
 #make it executable
 chmod 0775 /root/*.sh
 
 ##run the next script
-./root/GPU_ID.sh
+./root/GPU.sh
