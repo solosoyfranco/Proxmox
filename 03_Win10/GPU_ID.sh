@@ -4,7 +4,7 @@
 echo "----------------------------------------------------------------"
 echo "Start of script"
 echo "----------------------------------------------------------------"
-
+echo " Copy and paste the GPU IDs"
 #Ask the user for their values
 echo "----------------------------------------------------------------"
 #show the PC IDS
@@ -18,10 +18,10 @@ echo "nano /etc/modprobe.d/vfio.conf"
 echo "----------------------------------------------------------------"
 
 ### update changes
-echo " - update initram"
-update-initramfs -u -k all
-echo " - update grub"
-update-grub
+# echo " - update initram"
+# update-initramfs -u -k all
+# echo " - update grub"
+# update-grub
 
 
 
