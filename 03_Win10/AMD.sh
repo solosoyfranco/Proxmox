@@ -47,4 +47,4 @@ curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/GP
 chmod 0775 /root/*.sh
 
 ##run the next script
-./GPU_ID.sh
+./root/GPU_ID.sh
