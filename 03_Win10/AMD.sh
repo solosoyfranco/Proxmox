@@ -40,3 +40,8 @@ echo "----------------------------------------------------------------"
 echo "Copy your GPU IDs below and run the next script"
 echo "----------------------------------------------------------------"
 lspci -nn -k | grep -EA3 'VGA|3D|Display|Audio'
+
+bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/fix_gpu_pass.sh)
+
+
+bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/GPU_ID.sh ) install
