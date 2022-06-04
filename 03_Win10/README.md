@@ -12,12 +12,13 @@ You must activate this function in the bios of the motherboard of your Proxmox h
 
 Once connected in SSH (root) on your host, paste the following line:
 ```bash
-wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/AMD.sh | bash
+
+bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/AMD.sh) install
 
 ```
 **NOTE**: dont run this script more than once.
 
-### Locate and take note of the numbers on your video card... I also included the digits that are on the NVIDIA audio card
+### Locate and copy the SERIAL and ID of the numbers on your video card... I also included the digits that are on the NVIDIA audio card
 Example:
 `01:00.0 3D controller [0302]: NVIDIA Corporation Device **[10de:1f95]** (rev a1)`
 
@@ -25,9 +26,19 @@ Example:
 Example:
 ` 10de:2204,10de:1aef `
 
-## Step 3: Insert your GPU ID and update 
+### Note: Edit or change the VFIO ID  
 ```bash
-wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/GPU_ID.sh | bash
+
+nano /etc/modprobe.d/vfio.conf
+
+```
+
+### Step 3: Change your Serial in the fix_gpu_pass.sh file
+This file is already on the crontab at every reboot, to avoid the GPU being used by proxmox
+```bash
+
+# instructions inside of the file
+nano /root/fix_gpu_pass.sh
 
 ```
 
