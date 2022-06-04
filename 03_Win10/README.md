@@ -18,6 +18,8 @@ bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_W
 ```
 **NOTE**: dont run this script more than once.
 
+---
+
 ### Locate and copy the SERIAL and ID of the numbers on your video card... I also included the digits that are on the NVIDIA audio card
 Example:
 `01:00.0 3D controller [0302]: NVIDIA Corporation Device **[10de:1f95]** (rev a1)`
@@ -33,7 +35,7 @@ nano /etc/modprobe.d/vfio.conf
 
 ```
 
-### Step 3: Change your Serial in the fix_gpu_pass.sh file
+## Step 3: Change your Serial in the fix_gpu_pass.sh file
 This file is already on the crontab at every reboot, to avoid the GPU being used by proxmox
 ```bash
 
@@ -43,7 +45,7 @@ nano /root/fix_gpu_pass.sh
 ```
 
 ### reboot Proxmox
-'reboot'
+`reboot`
 
 ## Step 4: Check your system
 Run the following commands to make sure all is good
@@ -84,5 +86,9 @@ Prerequistes
 * The following script will do the basic creation of a virtual machine ready to run Windows.
     After running the script you will just have to do the following from the GUI
     * Connect a hard drive for the OS (virtual or passthrough) depending on your preference.
+    * Add your Windows 10 ISO into the drive
     * Add the video card to passthrough
     * Add peripherals (Keyboard, Mouse, extra HDD, etc)
+    * Edit RAM
+    * Edit Cores
+  
