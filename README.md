@@ -31,9 +31,10 @@ Proxmox Virtual Environment is a free virtualization solution based on the Linux
 - [ ] Fileshare
 
 ### 03 - Creating a Win10 gaming VM
-- [x] Virtio ISO
-- [x] GPU Passthrough
-- [x] HDD Passthrough
+- [x] 1- Enable IOMMU on BIOS
+- [x] 2- Activate IOMMU/VFIO script
+- [x] 3- Check your system
+- [x] 4- Create Win10 VM Script
 
 ### 04 - HiveOS VM
 - [x] VM config

@@ -22,7 +22,7 @@ crontab -l 2>/dev/null; echo "@reboot /root/fix_gpu_pass.sh" | crontab
 echo "----------------------------------------------------------------"
 lspci -nn -k | grep -EA3 'VGA|3D|Display|Audio'
 echo "----------------------------------------------------------------"
-echo "now copy the video card serial and paste it in the fix_gpu_pass file"
+echo "now copy the video card serial and paste it in the fix_gpu_pass.sh file"
 echo "nano /root/fix_gpu_pass.sh"
-echo "please REBOOT your system after you save the file"
+echo "Once you edit the fix_gpu_pass,REBOOT your system"
 echo "----------------------------------------------------------------"

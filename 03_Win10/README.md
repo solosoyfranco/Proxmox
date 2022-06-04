@@ -8,8 +8,8 @@ You must activate this function in the bios of the motherboard of your Proxmox h
 
 ---
 
-## Step 2: activate the IOMMU in Proxmox (for my Gigabyte X570 Aourus Master)
-
+## Step 2: activate the IOMMU in Proxmox 
+* AMD ONLY (tested on a Gigabyte X570 Aourus Master) 
 Once connected in SSH (root) on your host, paste the following line:
 ```bash
 
@@ -18,10 +18,24 @@ bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_W
 ```
 **NOTE**: dont run this script more than once.
 
----
+* INTEL ONLY (tested on a Z170MX Gaming 5) 
+Once connected in SSH (root) on your host, paste the following line:
+```bash
 
-### Locate and copy the SERIAL and ID of the numbers on your video card... I also included the digits that are on the NVIDIA audio card
-Example:
+bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_Win10/INTEL.sh) install
+
+```
+**NOTE**: dont run this script more than once.
+
+---
+---
+**The following steps are included in the script, but you can do it manually**
+---
+### Locate and copy the ID of the numbers on your video card... I also included the digits that are on my GPU audio card
+```bash
+lspci -nn
+```
+Example output:
 `01:00.0 3D controller [0302]: NVIDIA Corporation Device **[10de:1f95]** (rev a1)`
 
 ### Paste your digits separated by commas 
@@ -35,7 +49,13 @@ nano /etc/modprobe.d/vfio.conf
 
 ```
 
-## Step 3: Change your Serial in the fix_gpu_pass.sh file
+### Locate and change your GPU Serial in the fix_gpu_pass.sh file
+```bash
+lspci -k
+```
+Example output:
+`0c:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)`
+
 This file is already on the crontab at every reboot, to avoid the GPU being used by proxmox
 ```bash
 
@@ -43,11 +63,12 @@ This file is already on the crontab at every reboot, to avoid the GPU being used
 nano /root/fix_gpu_pass.sh
 
 ```
-
+---
+---
 ### reboot Proxmox
 `reboot`
 
-## Step 4: Check your system
+## Step 3: Check your system
 Run the following commands to make sure all is good
 ```bash
 
@@ -77,7 +98,7 @@ lspci -k
 
 ```
 
-## Step 5: Create Win10 VM
+## Step 4: Create Win10 VM
 Prerequistes
 * Have loaded a Win10 ISO on the Proxmox
 * Do not have 'VM-ID 110' in use

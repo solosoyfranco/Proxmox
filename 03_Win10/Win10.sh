@@ -19,3 +19,4 @@ ls -l /dev/disk/by-id/
 echo "----------------------------------------------"
 echo "Example:"
 echo "qm set 110 -scsi1 /dev/disk/by-id/ata-ST1000LM035-1RK172_ZDE9KP8A"
+echo "----------------------------------------------"

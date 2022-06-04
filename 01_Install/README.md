@@ -10,7 +10,7 @@
 
 
 ### SSH to the server and run the following command
-
+* *NOTE:*Some scripts commands do not work correctly when executed from the GUI-SHELL. I recommend running all the scripts connected from a SSH client to the Proxmox server.
 
 ```bash
 
@@ -136,4 +136,22 @@ wget -q -O - https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/01_Ins
       * **Join Information**
         * Copy Information
   * Go to the child nodes and paste the information to add to the cluster.
+
+### Removing cluster configuration
+This is a simple way to kill the process and delete the cluster
+
+```bash
+
+systemctl stop pve-cluster corosync
+pmxcfs -l
+rm /etc/corosync/*
+rm /etc/pve/corosync.conf
+killall pmxcfs
+systemctl start pve-cluster
+
+###source
+#https://forum.proxmox.com/threads/proxmox-ve-6-removing-cluster-configuration.56259/
+
+
+```
  
