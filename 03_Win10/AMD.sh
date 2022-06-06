@@ -22,7 +22,8 @@ echo 'GRUB_CMDLINE_LINUX=""' >> /etc/default/grub
 echo "- allow unsafe interrupts"
 echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf
 echo "- kvm ignore msrs"
-echo "options kvm ignore_msrs=1" > /etc/modprobe.d/kvm.conf
+echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
+echo "options kvm report_ignored_msrs=0" >> /etc/modprobe.d/kvm.conf
 #VFIO drivers
 echo "- Add VFIO into modules file"
 echo "vfio

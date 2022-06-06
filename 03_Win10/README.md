@@ -177,10 +177,10 @@ bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_W
 * Nvidia clean installer [NVCleanInstall](https://www.techpowerup.com/download/techpowerup-nvcleanstall/) 
 * Automatically login [Link](https://www.cnet.com/tech/services-and-software/automatically-log-in-to-your-windows-10-pc/)
   * Fix with registry [Link](https://www.askvg.com/fix-users-must-enter-a-user-name-and-password-to-use-this-computer-checkbox-missing-in-windows-10/)
-  * Enable RDP in settings
-  * Install [Parsec](https://parsec.app/downloads)
-  * Install [Chocolatey](https://chocolatey.org/install)
-    * My must-have software script 
+* Enable RDP in settings
+* Barrier for Win [Link](https://github.com/debauchee/barrier/releases)
+* Install [Chocolatey](https://chocolatey.org/install)
+  * My must-have software script 
     ```bash
       choco install firefox -y
       choco install 7zip.install -y
@@ -190,14 +190,21 @@ bash <(curl -s https://raw.githubusercontent.com/solosoyfranco/Proxmox/main/03_W
       choco install vscode -y
       choco install filezilla -y
       choco install k-litecodecpackfull -y
-      choco install microsoft-windows-terminal -y
-      choco install advanced-ip-scanner -y
+      # choco install microsoft-windows-terminal #broken
+      # choco install advanced-ip-scanner #broken
       choco install brave -y
       choco install everything -y
       choco install qbittorrent -y
       choco install discord.install -y
       choco install handbrake.install -y
       choco install prusaslicer -y
-      choco install autodesk-fusion360 -y
+      # choco install autodesk-fusion360 ##broken
       choco install eartrumpet -y
+      choco install parsec -y
+      choco install steam-client -y
+      choco install epicgameslauncher -y
+      choco install moonlight-qt.install -y
+      choco install lghub -y
+      choco install spotify -y
+
     ``` 
